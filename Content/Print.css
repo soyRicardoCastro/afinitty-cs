@@ -1,0 +1,159 @@
+﻿@page {
+    size: auto; /* auto is the current printer page size */
+    margin: 0mm;
+    margin-top: -30mm; /* this affects the margin in the printer settings */
+    line-height: 5px;
+    margin-left: -35mm;
+    margin-right: 5mm;
+}
+
+.printbody {
+    font-size: 10px;
+}
+
+#rsoc {
+    position: absolute;
+    left: 35px;
+    top: 90px;
+    font-size: 10px;
+}
+
+#rifp {
+    position: absolute;
+    left: 385px;
+    top: 90px;
+    font-size: 10px;
+}
+
+#fecha {
+    position: absolute;
+    left: 550px;
+    top: 90px;
+    font-size: 10px;
+}
+
+#dir1 {
+    position: absolute;
+    left: 35px;
+    top: 105px;
+    font-size: 10px;
+}
+
+#telef {
+    position: absolute;
+    left: 35px;
+    top: 120px;
+    font-size: 10px;
+}
+
+#dir2 {
+    position: absolute;
+    left: 35px;
+    top: 135px;
+    font-size: 10px;
+}
+
+#lineasfact {
+    position: absolute;
+    left: -15px;
+    top: 155px;
+    width: 90%;
+    font-size: 10px;
+}
+
+#centro {
+    position: absolute;
+    left: -15px;
+    top: 310px;
+    font-size: 10px;
+}
+
+#numpe {
+    position: absolute;
+    left: -15px;
+    top: 325px;
+    font-size: 10px;
+}
+
+#noten {
+    position: absolute;
+    left: -15px;
+    top: 340px;
+    font-size: 10px;
+}
+
+#tot1 {
+    position: absolute;
+    left: 545px;
+    top: 370px;
+    font-size: 10px;
+}
+
+#tot2 {
+    position: absolute;
+    left: 545px;
+    top: 440px;
+    font-size: 10px;
+}
+
+@media print {
+    .soloimp {
+        color: blue;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+
+    #mainpnl {
+        margin-top: 20px;
+    }
+    /*  #label1{
+        position:fixed;
+        margin-left:180px;
+        margin-top:10mm;
+    }*/
+
+
+    .containerPrint {
+        width: 100%;
+        margin-top: -300px;
+        margin: 10px auto;
+        font-size: 8px;
+    }
+}
+
+.mGrid td {
+    padding: 5px;
+    color: #717171;
+    text-align: center;
+}
+
+.mGrid2 td {
+    padding: 5px;
+    color: #717171;
+    text-align: center;
+}
+/*
+.mGrid th {
+    display: none;
+}*/
+/*.mGrid2 th {
+    display: none;
+}*/
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+body {
+}

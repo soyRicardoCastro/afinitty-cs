@@ -1,0 +1,714 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\oscar\OneDrive\Escritorio\Affis</_PublishTargetUrl>
+    <History>True|2022-03-11T19:18:11.1200248Z;True|2022-03-11T15:01:29.6541056-04:00;True|2022-03-11T14:59:31.8294157-04:00;True|2022-02-02T10:33:00.1810401-04:00;True|2022-01-21T16:20:01.0434804-04:00;True|2022-01-11T12:33:29.9125437-04:00;True|2021-12-22T11:01:52.9386646-04:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="About.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="AdicionConsulta.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="AdicionSeleccion.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="AdjuntarCert.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="AdminCert.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="AsistenciaLista.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="AsistFin.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Beneficiarios.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="BeneficiariosEdit.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/AspNet.ScriptManager.bootstrap.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/AspNet.ScriptManager.jQuery.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/ClosedXML.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/ClosedXML.pdb">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/DocumentFormat.OpenXml.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.AspNet.FriendlyUrls.resources.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Optimization.resources.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/ExcelNumberFormat.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.FriendlyUrls.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Web.Optimization.WebForms.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ScriptManager.MSAjax.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ScriptManager.WebForms.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/ReachSystem.dll">
+      <publishTime>03/11/2022 15:18:08</publishTime>
+    </File>
+    <File Include="bin/ReachSystem.pdb">
+      <publishTime>03/11/2022 15:18:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe.config">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Managed.Core.targets">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Win32.Primitives.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Console.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.DiagnosticSource.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.FileVersionInfo.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Globalization.Calendars.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.ZipFile.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Net.Http.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Net.Sockets.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Runtime.InteropServices.RuntimeInformation.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Algorithms.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Encoding.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Primitives.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.X509Certificates.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Threading.Tasks.Extensions.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.ValueTuple.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.ReaderWriter.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XmlDocument.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.XDocument.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/System.IO.Packaging.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Bundle.config">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Busqueda.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Certificados.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="CierreExclu.aspx">
+      <publishTime>02/02/2022 07:19:49</publishTime>
+    </File>
+    <File Include="CierreVenta.aspx">
+      <publishTime>02/02/2022 07:24:36</publishTime>
+    </File>
+    <File Include="CobranzaEmpDos.aspx">
+      <publishTime>03/07/2022 10:23:03</publishTime>
+    </File>
+    <File Include="CobranzaEmpUno.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="CobranzaTomadorDos.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="CobranzaTomadorUno.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="CobTomTres.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ConsMorosos.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ConsMorososDos.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Contact.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css.map">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css.map">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Content/columnas.css">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Content/Print.css">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>12/22/2021 10:38:35</publishTime>
+    </File>
+    <File Include="Contrasena.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="CrearUsu.aspx">
+      <publishTime>02/02/2022 09:24:13</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Default2.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="DescargaDos.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="EditarUsuario.aspx">
+      <publishTime>01/21/2022 11:11:32</publishTime>
+    </File>
+    <File Include="EditarUsuarioDos.aspx">
+      <publishTime>02/02/2022 09:46:26</publishTime>
+    </File>
+    <File Include="ElimCierreExclu.aspx">
+      <publishTime>02/02/2022 08:11:48</publishTime>
+    </File>
+    <File Include="ElimCierreVenta.aspx">
+      <publishTime>02/02/2022 07:50:36</publishTime>
+    </File>
+    <File Include="EliminarEspe.aspx">
+      <publishTime>12/22/2021 17:26:07</publishTime>
+    </File>
+    <File Include="EliminarGen.aspx">
+      <publishTime>02/16/2022 09:22:26</publishTime>
+    </File>
+    <File Include="EliminarPago.aspx">
+      <publishTime>03/11/2022 11:08:12</publishTime>
+    </File>
+    <File Include="EmpDetalleUno.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="EmpEdicUno.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="EmpresaDetalleDos.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="GestionPass.aspx">
+      <publishTime>01/11/2022 14:50:02</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="InclusionAegurados.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="InclusionCertificados.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="InclusionTomador.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="InicioEmpresa.aspx">
+      <publishTime>01/21/2022 15:54:11</publishTime>
+    </File>
+    <File Include="InicioProceso.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Liquidaciones.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="LiquiDos.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ListaTotal.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ListaUsuarios.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ListaUsuariosPen.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>01/11/2022 14:35:23</publishTime>
+    </File>
+    <File Include="MedioCobro.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="NombreConsulta.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ProcBenef.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ProcCert.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ProcesoCompletado.aspx">
+      <publishTime>03/07/2022 08:10:21</publishTime>
+    </File>
+    <File Include="ProcesoIngresado.aspx">
+      <publishTime>03/07/2022 08:00:20</publishTime>
+    </File>
+    <File Include="ProcesoRevisado.aspx">
+      <publishTime>03/07/2022 08:10:55</publishTime>
+    </File>
+    <File Include="ProdCreacion.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ProdCreacionB.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ProdLista.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ProdListaB.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ProdListaEdic.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ProdListaEdicB.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ProReten.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="RecDos.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Recepcion.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="RecepDoc.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReclamoCons.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReclamoDocCons.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReclamoHistCons.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReclamoRespCons.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Reclamos.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReclamosCreacion.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReclamosDocumentacion.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReclamosResponder.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReemplazoCons.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReemplazoElim.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Registro.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Reporte.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteApertura.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteAseg.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteCasos.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteCert.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteCertificados.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteCertificadosEntregados.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteCierres.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteCierresFinal.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteCobert.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteCobertEmp.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteCobranzaTomador.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteConsolidadoCobros.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteDebitosCTA.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteDebitosTC.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteDescuentos.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteDescuentosEsp.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteEntregaPagos.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteEstCert.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteExclu.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteExclusionesFinal.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteGenVen.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteLiquidaciones.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReportePagos.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReportePrimaEmp.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteRec.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteSeguimiento.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteTomadores.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteTomFinal.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteTotCob.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteuSUARIOS.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="ReporteVenVen.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="RetenFin.aspx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/ExprotExcel.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.min.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.min.map">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.min.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.min.map">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.8.3.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/DetailsView.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/Focus.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/GridView.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/Menu.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MenuStandards.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjax.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxApplicationServices.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxComponentModel.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxCore.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxGlobalization.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxHistory.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxNetwork.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxSerialization.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxTimer.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxWebForms.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxWebServices.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/SmartNav.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/TreeView.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/WebForms.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/WebParts.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/WebUIValidation.js">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Site.Master">
+      <publishTime>03/07/2022 09:34:15</publishTime>
+    </File>
+    <File Include="UsuEdicUno.aspx">
+      <publishTime>02/02/2022 08:42:40</publishTime>
+    </File>
+    <File Include="ViewSwitcher.ascx">
+      <publishTime>06/21/2021 12:43:22</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/11/2022 15:18:09</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,272 @@
+﻿                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              0<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ReachSystem.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <title>AFFIINITY</title>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="Content/columnas.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="Content/Print.css" rel="stylesheet" media="print"/>
+    
+</head>
+<body>
+    <form runat="server">
+       <nav class="nave fila fijador no-print">
+            <div  class="col2L  col0M col0S col0T" >
+                  <a href="Default.aspx"><img id="logo" src="https://1.bp.blogspot.com/-pWSO2elPkeI/X5woEanJ0GI/AAAAAAAAPkI/UMptMYuBh6oX0V61V2758z_VF52oc8i-ACLcBGAsYHQ/s16000/logo.png" /></a>
+            </div>   
+           <div id="barra" class="col4L col6M col6S col10T no-print">
+               <input class="col7L busqueda busquedaL busquedaM busquedaS" id="busqueda" type="text" placeholder=" CEDULA/CERTIFICADO" runat="server" />                  
+               <asp:LinkButton id="searching" class="fa fa-search searchbut" onclick="BuscarClick" runat="server"></asp:LinkButton>  
+               <%--<asp:RegularExpressionValidator Display="Dynamic" ControlToValidate="busqueda" ID="MyPassordMinMaxLengthValidator" ValidationExpression="^[\s\S]{3,10}$" runat="server" ErrorMessage="LA BUSQUEDA DEBE TENER 3-10 CARACTERES"></asp:RegularExpressionValidator>--%>
+                </div>
+        </nav>
+        <nav class="subnave fijadordos no-print">
+            <label class="fa fa-bars botonsub" for="check"/>&ensp;  
+            <i class="fas fa-user"></i>&ensp;<asp:Label ID="Label1" runat="server" CssClass="nomlog" for="chek"></asp:Label>
+           
+        </nav> 
+        <div id="cajacontenedor" class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div> 
+        <input type="checkbox" class="checkbox" id="check"/>
+        <label class="panelbloqueadorizq" for="check"></label>
+        <div id="block1" class="menulateral" >
+            <div class="desplegable" id="BLOQUE1" runat="server">
+                
+                <h3 class="titulomenu">WSM</h3>
+                <ul>
+                    <li>EMPRESA</li>
+                    <li>
+                        <ul>
+                            <li><a href="InicioEmpresa.aspx" id="ap1" runat="server">Apertura</a></li>
+                        </ul>
+                    </li>
+                    <li>VENTAS</li>  
+                    <li>
+                        <ul>
+                            <li><a href="NombreConsulta.aspx" id="consnom" runat="server" target="_blank" rel="noreferrer">Consultas</a></li>
+                            <li><a href="InicioProceso.aspx" id="inipro" runat="server">Inclusion</a></li>
+                            <li><a href="AdicionConsulta.aspx" id="adic" runat="server">Adicion</a></li>  
+                            <li><a href="ReemplazoCons.aspx" id="rem" runat="server">Reemplazo</a></li> 
+                        </ul>
+                    </li>
+                    <li>CIERRES</li>
+                    <li>
+                        <ul>
+                            <li><a href="CierreVenta.aspx" id="cierr" runat="server">Ventas</a></li>  
+                            <li><a href="CierreExclu.aspx" id="cirrex" runat="server">Exclusiones</a></li>  
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="desplegable" id="BLOQUE2" runat="server">                
+                <h3 class="titulomenu">BANCA SEGUROS</h3>
+                <ul>
+                    <li>EMPRESA</li>
+                    <li>
+                        <ul>
+                            <li><a href="Default2.aspx" id="aper2" runat="server">Apertura</a></li>
+                        </ul>
+                    </li>
+                    <li>VENTAS</li>  
+                    <li>
+                        <ul>
+                            <li><a href="NombreConsulta.aspx" id="cons2" runat="server">Consultas</a></li>
+                            <li><a href="InicioProceso.aspx" id="inc2" runat="server">Inclusion</a></li>
+                            <li><a href="AdicionConsulta.aspx" id="adic2" runat="server">Adicion</a></li>  
+                            <li><a href="ReemplazoCons.aspx" id="rem2" runat="server">Reemplazo</a></li> 
+                        </ul>
+                    </li>
+                    <li>BANCA SEGUROS</li>  
+                            <li>
+                                <ul>
+                                    <li><a href="ProdListaB.aspx" id="list2" runat="server">Lista</a></li>
+                                    <li><a href="ProdCreacionB.aspx" id="prod2" runat="server">Creacion</a></li>
+                                    <li><a href="ProdListaEdicB.aspx" id="edic2" runat="server">Edicion</a></li>
+                                </ul>
+                            </li>
+                </ul>
+            </div>
+            <div class="desplegable" id="BLOQUE3" runat="server">                
+                <h3 class="titulomenu">OPERACIONES</h3>
+                <ul>
+                    <li>PRODUCTOS</li>  
+                    <li>
+                        <ul>
+                            <li>WSM</li>
+                            <li>
+                                <ul>
+                                    <li><a href="ProdLista.aspx" id="list" runat="server">Lista</a></li>
+                                    <li><a href="ProdCreacion.aspx" id="crea" runat="server">Creacion</a></li>
+                                    <li><a href="ProdListaEdic.aspx" id="edic" runat="server">Edicion</a></li>
+                                </ul>
+                            </li>                            
+                        </ul>
+                    </li>
+                    <li>CERTIFICADOS</li>
+                    <li>
+                        <ul>
+                            <li><a href="AdminCert.aspx" id="admin" runat="server">Administracion</a></li>
+                            <li><a href="ProcCert.aspx" id="proc" runat="server">Procesamiento</a></li>
+                            <li><a href="ProcBenef.aspx" id="A10" runat="server">Beneficiarios Edicion</a></li>
+                            <li><a href="ProReten.aspx" id="reten" runat="server">Gestion Exclusiones</a></li>                            
+                        </ul>
+                    </li>                                        
+                    <li>ADMINISTRACION</li>  
+                    <li>
+                        <ul>
+                            <li>EMPRESA</li>
+                            <li>
+                                <ul>
+                                    <li><a href="Default2.aspx" id="aper3" runat="server">Apertura</a></li>
+                                    <li><a href="EmpDetalleUno.aspx" id="empre" runat="server">Datos</a></li>
+                                    <li><a href="EmpEdicUno.aspx" id="A1" runat="server">Edicion</a></li>
+                                </ul>
+                            </li>
+                               
+                            <li><a href="AsistenciaLista.aspx" id="asist" runat="server">Registro Asistencia</a></li> 
+                        </ul>
+                    </li>
+                    <li>COBRANZAS</li>  
+                    <li>
+                        <ul>                             
+                            <li><a href="Recepcion.aspx" id="A3" runat="server">Recepcion Documentos</a></li>                              
+                            <li><a href="CobranzaEmpUno.aspx" id="cobremp" runat="server">Gestion Empresa</a></li>   
+                            <li><a href="CobranzaTomadorUno.aspx" id="cobtom" runat="server">Gestion Tomador Notificar</a></li>    
+                            <li><a href="ConsMorosos.aspx" id="cobmor" runat="server">Gestion Tomador Consultar</a></li>   
+                        </ul>
+                    </li>
+                    <li>COMISIONES</li>
+                    <li>
+                        <ul>
+                            <li><a href="Liquidaciones.aspx" id="A2" runat="server">Liquidaciones</a></li> 
+                        </ul>
+                    </li>
+                    <li>RECLAMOS</li>  
+                    <li>
+                        <ul>
+                            <li><a href="ReclamoHistCons.aspx" id="rechist" runat="server">Consultas</a></li> 
+                            <li><a href="ReclamoCons.aspx" id="recons" runat="server">Creacion</a></li> 
+                            <li><a href="ReclamoDocCons.aspx" id="recdoc" runat="server">Registro Documentos</a></li> 
+                            <li><a href="ReclamoRespCons.aspx" id="recresp" runat="server">Resolucion</a></li> 
+                        </ul>
+                    </li>
+                    
+                      
+                    
+                </ul>
+                
+                </div>
+                <div class="desplegable" id="BLOQUE4" runat="server">
+                    <h3 class="titulomenu">REPORTES</h3>
+                    <ul>
+                        <li>WSM</li>  
+                        <li>
+                            <ul>
+                                <li><a href="ReporteVenVen.aspx" id="repvendedor" runat="server">General De Ventas</a></li> 
+                                <li><a href="ReporteSeguimiento.aspx" id="A20" runat="server">Seguimiento</a></li>
+                                <li><a href="ReporteTomFinal.aspx" id="reptom" runat="server">Tomadores</a></li>
+                            </ul>
+                        </li>
+                        <li>OPERACIONES</li>  
+                        <li>
+                            <ul>
+                                <li><a href="ReporteCertificados.aspx" id="repcert2" runat="server">Estado Certificados</a></li>  
+                                <li><a href="ReporteDescuentos.aspx" id="A4" runat="server">Descuentos Generico</a></li>
+                                <li><a href="ReporteDescuentosEsp.aspx" id="A5" runat="server">Descuentos Especifico</a></li>
+                                <li><a href="Reporte.aspx" id="A9" runat="server">Asegurados</a></li>
+                                <li><a href="ReporteCertificadosEntregados.aspx" id="A7" runat="server">Entrega Certificados</a></li>     
+                                <li><a href="ReporteTotCob.aspx" id="A6" runat="server">Totales Por Coberturas</a></li> 
+                                <li><a href="ReporteExclusionesFinal.aspx" id="A8" runat="server">Exclusiones</a></li> 
+                            </ul>
+                        </li>
+                        <li>COBRANZAS</li>  
+                        <li>
+                            <ul>
+                                <li><a href="ReporteDebitosTC.aspx" id="A11" runat="server">Debitos Bancarios TC</a></li> 
+                                <li><a href="ReporteDebitosCTA.aspx" id="A12" runat="server">Debitos Bancarios CTA</a></li> 
+                                <li><a href="ReporteEntregaPagos.aspx" id="A18" runat="server">Entrega De Pagos</a></li> 
+                                <li><a href="ReporteConsolidadoCobros.aspx" id="A14" runat="server">Consolidado De Cobros</a></li> 
+                                <li><a href="ReporteCobranzaTomador.aspx" id="A15" runat="server">Cobranza Tomador</a></li>
+                            </ul>
+                        </li>
+                        <li>FACTURACION</li>  
+                        <li>
+                            <ul>
+                               <li><a href="ReportePrimaEmp.aspx" id="A13" runat="server">Prima Por Empresa</a></li> 
+                               <li><a href="ReporteCierresFinal.aspx" id="repcierr" runat="server">Cierres</a></li>
+                            </ul>
+                        </li>
+                        <li>RECLAMOS</li>  
+                        <li>
+                            <ul>
+                                 <li><a href="ReporteCasos.aspx" id="A16" runat="server">Casos</a></li>
+                            </ul>
+                        </li>
+                        <li>COMISIONES</li>  
+                        <li>
+                            <ul>
+                                <li><a href="ReporteApertura.aspx" id="A17" runat="server">Apertura Empresa</a></li>                             
+                                <li><a href="ReporteLiquidaciones.aspx" id="A19" runat="server">Liquidaciones</a></li> 
+                            </ul>
+                        </li>                                      
+                    
+                    </div>  
+            <div class="desplegable" id="Div1" runat="server">
+                
+                <h3 class="titulomenu">ADMINISTRACION</h3>
+                <ul>
+                    <li>USUARIOS</li>
+                    <li>
+                        <ul>
+                            <%--<li><a href="ReporteuSUARIOS.aspx" id="repus" runat="server">Usuarios</a></li> --%>
+                            <li><a href="CrearUsu.aspx" id="A24" runat="server">Crear Usuarios</a></li> 
+                            <li><a href="UsuEdicUno.aspx" id="A25" runat="server">Editar Usuarios</a></li>
+                            <li><a href="GestionPass.aspx" id="A23" runat="server">Actualizar Contraseña</a></li> 
+                        </ul>
+                    </li>
+                    <li>MANTENIMIENTO</li>  
+                    <li>
+                        <ul>
+                            <li><a href="EliminarGen.aspx" id="A22" runat="server">Eliminar Registros Inconclusos</a></li>        
+                            <li><a href="EliminarEspe.aspx" id="A21" runat="server">Eliminar Registros Especificos</a></li> 
+                        </ul>
+                    </li>  
+                    <li>CIERRES</li>  
+                    <li>
+                        <ul>
+                            <li><a href="ElimCierreVenta.aspx" id="A26" runat="server">Eliminar Cierre Ventas</a></li>        
+                            <li><a href="ElimCierreExclu.aspx" id="A27" runat="server">Eliminar Cierre Exclusiones</a></li>
+                            <li><a href="EliminarPago.aspx" id="A28" runat="server">Eliminar Pago</a></li>
+                        </ul>
+                    </li>  
+                </ul>
+                <ul>
+                        <li><asp:LinkButton CausesValidation="False" OnClick="CierreClick" runat="server" CssClass="botoncierre"  style="color:red;" ><i class="fa fa-user"></i> CERRAR SESION</asp:LinkButton></li>
+                    </ul>
+                    <br /> 
+                    <br /> 
+                    <br /> 
+                    <br /> 
+                    <br /> 
+            </div>
+            <br />                       
+        </div>            
+    </form>
+</body>
+</html>
