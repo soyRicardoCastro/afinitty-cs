@@ -19,10 +19,9 @@ namespace ReachSystem
                 {
                     Label1.Attributes.Add("style", "display:inline, font-weight: bold; font-size: 18px;");
                     INCLU.Attributes.Add("style", "display:inline");
-                    Label1.Text = "EL REGISTRO NO EXISTE EN NUESTRA BASE DE DATOS ¿QUE DESEA HACER?";
+                    Label1.Text = "El Registro no existe en la base de datos, ¿Que desea hacer?";
                     Correo.Value = Request.Cookies["paramCedula"].Value;
                     Response.Cookies["paramCedula"].Expires = DateTime.Now.AddDays(-1);
-
                 }
                 else
                 {
@@ -48,13 +47,10 @@ namespace ReachSystem
             using (SqlConnection con = new SqlConnection(connectionString))
             using (SqlCommand cmd = new SqlCommand(query, con))
             {
-
                 cmd.Parameters.Add("@Cedula", SqlDbType.VarChar, 50).Value = GridView1.Rows[i].Cells[0].Text;
                 cmd.Parameters.Add("@Nombre", SqlDbType.VarChar, 50).Value = GridView1.Rows[i].Cells[1].Text;
 
-
                 con.Open();
-
 
                 using (SqlDataReader dr = cmd.ExecuteReader())
                 {

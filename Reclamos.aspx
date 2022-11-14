@@ -42,7 +42,7 @@
                     </asp:GridView>
                     <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:affisDBConnectionString %>' SelectCommand="SELECT [Cedula], [Celular], [Entidad], [Relacion], [Cobertura], [Causa], [Casa], [Plan], [CasoNum], [Fecha], [Nombre], [Direccion], [MedioDeCobro] FROM [Reclamos] WHERE ([CasoNum] = @CasoNum)">
                         <SelectParameters>
-                            <asp:CookieParameter CookieName="casorecC" Name="CasoNum" Type="Int32"></asp:CookieParameter>
+                            <asp:CookieParameter CookieName="casorecC" Name="CasoNum" Type="Int64"></asp:CookieParameter>
                         </SelectParameters>
                     </asp:SqlDataSource>                        
                     <asp:GridView ID="GridView2" runat="server" DataSourceID="SqlDataSource2" AutoGenerateColumns="False" GridLines="None" BackColor="White" BorderStyle="None" BorderWidth="1px" CellPadding="20" ForeColor="Black" CssClass="mGrid" PagerStyle-CssClass="pgr" margin-left="2%" AlternatingRowStyle-CssClass="alt" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
@@ -69,7 +69,7 @@
                     </asp:GridView>
                     <asp:SqlDataSource runat="server" ID="SqlDataSource2" ConnectionString='<%$ ConnectionStrings:affisDBConnectionString %>' SelectCommand="SELECT [Nombre], [Direccion], [Ejecutivo], [Asegurado], [Diagnostico], [CasoNum], [Fecha], [Observaciones], Relacion, Cobertura, [Plan], Causa, Casa FROM [Reclamos] WHERE ([CasoNum] = @CasoNum)">
                         <SelectParameters>
-                            <asp:CookieParameter CookieName="casorecC" Name="CasoNum" Type="Int32"></asp:CookieParameter>
+                            <asp:CookieParameter CookieName="casorecC" Name="CasoNum" Type="Int64"></asp:CookieParameter>
                         </SelectParameters>
                     </asp:SqlDataSource>  
                     <hr />

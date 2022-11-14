@@ -25,7 +25,10 @@ namespace ReachSystem
             }
             else
             {
-
+                HttpCookie nombretomS = new HttpCookie("comertempC");
+                nombretomS.Value = Correo.Value;
+                nombretomS.Expires = DateTime.Now.AddDays(30);
+                Response.Cookies.Add(nombretomS);
             }
         }
         protected void Unnamed_Click(object sender, EventArgs e)

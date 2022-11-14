@@ -19,7 +19,7 @@ namespace ReachSystem
                 {
                     Label1.Attributes.Add("style", "display:inline, font-weight: bold; font-size: 18px;");
                     INCLU.Attributes.Add("style", "display:inline");
-                    Label1.Text = "EL REGISTRO NO EXISTE EN NUESTRA BASE DE DATOS ¿QUE DESEA HACER?";
+                    Label1.Text = "El Registro no existe en la base de datos, ¿Que desea hacer?";
                     Correo.Value = Request.Cookies["paramComer"].Value;
                     Response.Cookies["paramComer"].Expires = DateTime.Now.AddDays(-1);
                 }
@@ -184,19 +184,11 @@ namespace ReachSystem
         }
         protected void Unnamed2_Click(object sender, EventArgs e)
         {
-            //HttpCookie totalS = new HttpCookie("indexC");
-            //totalS.Value = "1";
-            //totalS.Expires = DateTime.Now.AddDays(30);
-            //Response.Cookies.Add(totalS);
             string buscar = Correo.Value;
             HttpCookie buscarS = new HttpCookie("paramComer");
             buscarS.Value = buscar;
             buscarS.Expires = DateTime.Now.AddDays(30);
             Response.Cookies.Add(buscarS);
-            //HttpCookie fecha2S6 = new HttpCookie("indexWSM");
-            //fecha2S6.Value = "INCLUSION";
-            //fecha2S6.Expires = DateTime.Now.AddDays(30);
-            //Response.Cookies.Add(fecha2S6);
             Response.Redirect("Default2.aspx");
 
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Drawing.Charts;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -61,6 +62,7 @@ namespace ReachSystem
                     if (dr.Read())
                     {
                         string fechanac = dr.GetFieldValue<System.DateTime>(0).ToString();
+                        System.Diagnostics.Debug.WriteLine(fechanac);
                         string genero = dr.GetFieldValue<string>(1);
                         string direccion = dr.GetFieldValue<string>(2);
                         string direccionemp = dr.GetFieldValue<string>(3);
@@ -74,7 +76,7 @@ namespace ReachSystem
                         decimal ajuste = dr.GetFieldValue<decimal>(11);
 
                         HttpCookie nombreS = new HttpCookie("fechanacadC");
-                        nombreS.Value = fechanac;
+                        nombreS.Value = fechanac.ToString();
                         nombreS.Expires = DateTime.Now.AddDays(30);
                         Response.Cookies.Add(nombreS);
 
@@ -134,7 +136,7 @@ namespace ReachSystem
                         Response.Cookies.Add(perfil31S);
 
                         HttpCookie perfilS7 = new HttpCookie("fechanactomC");
-                        perfilS7.Value = fechanac;
+                        perfilS7.Value = fechanac.ToString();
                         perfilS7.Expires = DateTime.Now.AddDays(30);
                         Response.Cookies.Add(perfilS7);
 

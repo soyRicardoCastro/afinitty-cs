@@ -11,7 +11,9 @@ namespace ReachSystem
 {
     public partial class Contrasena : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+    public static object Value { get; internal set; }
+
+    protected void Page_Load(object sender, EventArgs e)
         {
 
         }

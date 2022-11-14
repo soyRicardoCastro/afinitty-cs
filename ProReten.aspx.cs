@@ -86,7 +86,7 @@ namespace ReachSystem
             fechaS.Value = FECHA.ToString();
             fechaS.Expires = DateTime.Now.AddDays(30);
             Response.Cookies.Add(fechaS);
-            Response.Redirect("Proreten.aspx");
+            Response.Redirect("ProReten.aspx");
 
         }
 

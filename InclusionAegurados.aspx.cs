@@ -571,18 +571,23 @@ namespace ReachSystem
         protected void Unnamed_Click(object sender, EventArgs e)
         {
             DateTime estasi = DateTime.Parse(Text2.Value);
-            int edadaseg = DateTime.Now.Year - estasi.Year;
+            TimeSpan edadasegprev = DateTime.Now - estasi;
+            double edadaseg = edadasegprev.TotalDays / 365;
+            HttpCookie indexS2 = new HttpCookie("promC");
+            indexS2.Value = edadaseg.ToString();
+            indexS2.Expires = DateTime.Now.AddDays(30);
+            Response.Cookies.Add(indexS2);
             double limitemin;
             double limitemax;
             if (Request.Cookies["indexC"] != null)
             {
                 limitemin = Int32.Parse(Request.Cookies["minC"].Value);
-                limitemax = Int32.Parse(Request.Cookies["maxC"].Value);
+                limitemax = Double.Parse(Request.Cookies["maxC"].Value);
             }
             else
             {
                 limitemin = Int32.Parse(Request.Cookies["minC"].Value);
-                limitemax = Int32.Parse(Request.Cookies["maxC"].Value);
+                limitemax = Double.Parse(Request.Cookies["maxC"].Value);
             }
     
             

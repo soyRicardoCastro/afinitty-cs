@@ -139,7 +139,7 @@ namespace ReachSystem
         protected void descarga1(object sender, EventArgs e)
         {
             string connectionString2 = Conection.ConexLine;
-            string query2 = "Select distinct 'x', Codigo, Nombre, Cedula, SUM(TotalCobrar) OVER(PARTITION BY Cedula) As Descuento FROM Asegurados WHERE FechaVigencia BETWEEN @fechaini AND @fechafin AND Estado = 'VENTA' AND NombreComercial = @ven group by Cedula, Nombre, Codigo, TotalCobrar"; 
+            string query2 = "Select distinct 'x', Codigo, Nombre, Cedula, SUM(TotalCobrar) OVER(PARTITION BY Cedula) As Descuento FROM Asegurados WHERE FechaVigencia BETWEEN @fechaini AND @fechafin AND Estado = 'VENTA' AND NombreComercial = @ven"; 
 
 
             using (SqlConnection con2 = new SqlConnection(connectionString2))

@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
-https://go.microsoft.com/fwlink/?LinkID=208121. 
+https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project>
   <PropertyGroup>
-    <_PublishTargetUrl>C:\Users\oscar\OneDrive\Escritorio\Affis</_PublishTargetUrl>
-    <History>True|2022-07-27T21:32:33.1561361Z;True|2022-07-26T15:26:13.9672361-04:00;True|2022-07-25T17:32:24.0752890-04:00;True|2022-07-25T17:30:57.0749385-04:00;True|2022-07-22T16:21:51.8501411-04:00;True|2022-06-22T12:38:29.8099335-04:00;True|2022-06-16T13:55:11.0446095-04:00;True|2022-06-15T11:30:19.1503721-04:00;True|2022-05-31T09:32:49.3728176-04:00;True|2022-05-20T17:08:49.4427072-04:00;True|2022-05-19T17:25:56.6306412-04:00;True|2022-03-30T12:23:54.8335219-04:00;True|2022-03-30T12:18:46.3866104-04:00;True|2022-03-11T15:18:11.1200248-04:00;True|2022-03-11T15:01:29.6541056-04:00;True|2022-03-11T14:59:31.8294157-04:00;True|2022-02-02T10:33:00.1810401-04:00;True|2022-01-21T16:20:01.0434804-04:00;True|2022-01-11T12:33:29.9125437-04:00;True|2021-12-22T11:01:52.9386646-04:00;</History>
+    <_PublishTargetUrl>C:\Users\Usuario\Desktop\Affis</_PublishTargetUrl>
+    <History>True|2022-10-04T20:47:30.6437710Z;</History>
+    <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
     <File Include="About.aspx">
@@ -87,10 +88,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/21/2021 12:43:22</publishTime>
     </File>
     <File Include="bin/ReachSystem.dll">
-      <publishTime>07/27/2022 17:32:29</publishTime>
+      <publishTime>10/04/2022 16:47:29</publishTime>
     </File>
     <File Include="bin/ReachSystem.pdb">
-      <publishTime>07/27/2022 17:32:29</publishTime>
+      <publishTime>10/04/2022 16:47:29</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>06/21/2021 12:43:22</publishTime>
@@ -708,7 +709,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/21/2021 12:43:22</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/15/2022 11:30:17</publishTime>
+      <publishTime>10/04/2022 16:47:29</publishTime>
     </File>
   </ItemGroup>
 </Project>

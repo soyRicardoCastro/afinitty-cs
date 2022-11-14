@@ -1,16 +1,4 @@
-﻿body {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    font-family: 'Trebuchet MS';
-}
-/*#BodyContent{
-    position:relative;
-    top:130px;
-}*/
-
-.Aviso {
+﻿.Aviso {
     visibility: visible;
     color: red;
 }
@@ -23,7 +11,7 @@
 }
 
 .subnave {
-    background-color: #0b167c;
+    background-color: #7c0b0b;
     height: 30px;
     color: white;
     font-weight: bold;
@@ -31,29 +19,26 @@
 }
 
 .checkbox {
-    display: none;
+    /* display: none; */
 }
 
-    .checkbox:checked ~ .menulateral {
-        margin-left: 0;
-    }
 
 .menulateral {
-    background-color: #293133;
-    padding: 10px;
-    width: 30%;
- /*   margin-top: 130px;*/
-  /*  min-height: 100%; */
+    background-color: rgb(31, 41, 55);
+    padding: 20px;
     color: white;
     font-family: 'Trebuchet MS', sans-serif;
     position: fixed;
-    top: 130px;
+    top: 60px;
     bottom: 0px;
-    margin-left: -30%;
-    transition: left 0.7s;
+    margin-left: -70%;
+    transition: .3s ease all;
     z-index: 2;
     overflow-y: scroll;
-    /*   clear: both;*/
+}
+
+.menulateral.active {
+    margin-left: 0;
 }
 
 li:hover {
@@ -72,11 +57,21 @@ div {
     border:none;
     font-size:18px;
     font-weight:bold;
+    margin: 25px 0;
+    padding-left: 15px;
+    color: rgb(255, 56, 56);
+    transition: .3s ease all;
+}
+.botoncierre:hover {
+    color: #f00;
 }
 
 .titulomenu {
-    background-color: none;
-    font-weight: bold;
+    font-size: 22px;
+    padding: 0 15px;
+    background: rgb(60 161 213);
+    border-radius: 0 20px 20px 0;
+    letter-spacing: 2px;
 }
 
 #logo {
@@ -113,14 +108,29 @@ li a {
     text-align: center;
 }
 
+.baseform h2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
 .formulario {
     padding: 10px;
-    width: 50%;
     border-color: black;
     margin: 20px;
     border-radius: 5px;
     font-family: 'Trebuchet MS';
 }
+
+input.formulario {
+  padding: 12px 20px;
+  color: #000 !important;
+}
+
+select.formulario {
+  background: #3578cf;
+}
+
 .formularioblock {
     padding: 10px;
     width: 90%;
@@ -135,7 +145,10 @@ li a {
     border-color: black;   
     border-radius: 5px;
     font-family: 'Trebuchet MS';
-    
+    color: #000;
+}
+.formularioProc[disabled="disabled"] {
+  color: #ccc !important;
 }
 .formularioProc3 {
     padding: 10px;
@@ -187,21 +200,23 @@ li a {
 }
 .formularioDos {
     padding: 10px;
-    /*width: 50%;*/
     border-color: black;
     margin: 20px;
     border-radius: 5px;
     font-family: 'Trebuchet MS';
 }
 
+.form-row table tbody tr th {
+  color: #fff !important;
+}
+
 .botonsubmit {
-    background-color: black;
-    border-color: black;
-    width: 50%;
-    font-family: 'Trebuchet MS';
-    color: white;
-    border-radius: 5px;
-    padding: 10px;
+  background-color: rgb(60, 161, 213) !important;
+  font-family: 'Trebuchet MS';
+  color: white;
+  border-radius: 12px;
+  padding: 10px 22px;
+  font-weight: bold;
 }
 .botonsubmitDOS {
     background-color: black;
@@ -215,34 +230,30 @@ li a {
     margin:5px;
 }
 .botonsubmitTRES {
-    background-color: #73B1FF;
-    border-color: black;
-    width: 22%;
-    font-family: 'Trebuchet MS';
-    color: white;
-    border-radius: 5px;
-    padding: 10px;    
-    margin: 5px;
+  background-color: rgb(60, 161, 213) !important;
+  font-family: 'Trebuchet MS';
+  color: white;
+  border-radius: 12px;
+  padding: 10px 22px;
+  font-weight: bold;
 }
 .botonsubmitTRESTRES {
-    background-color: red;
-    border-color: black;
-    width: 22%;
-    font-family: 'Trebuchet MS';
-    color: white;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 5px;
+  background-color: red;
+  border-color: black;
+  font-family: 'Trebuchet MS';
+  color: white;
+  border-radius: 12px;
+  padding: 10px 22px;
+  font-weight: bold;
 }
 .botonsubmitTRESDOS {
-    background-color: #73B1FF;
-    border-color: black;
-    width: 60%;
-    font-family: 'Trebuchet MS';
-    color: white;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 5px;
+  background-color: rgb(60, 161, 213) !important;
+  font-family: 'Trebuchet MS';
+  color: white;
+  border-radius: 12px;
+  padding: 10px 22px;
+  font-weight: bold;
+  margin: 0 20px;
 }
 .botonsubmitCUATRO {
     background-color: greenyellow;
@@ -267,112 +278,61 @@ li a {
     margin: 3px;
     text-decoration: none;
 }
-
-/*.mGrid {
-    width: 100%;
-    background-color: #fff;
-    margin: 5px 0 10px 0;
-    border: none;
-    border-collapse: collapse;
-}
-
-    .mGrid td {
-        padding: 20px;
-        border: none;
-        color: #717171;
-    }
-
-    .mGrid th {
-        padding: 4px 2px;
-        color: #252850;
-        background: #fff url(grd_head.png) repeat-x top;
-        border-left: none;
-        font-size: 0.9em;
-        font-weight: bold;
-    }
-
-    .mGrid .alt {
-        background: #c2c2c2 url(grd_alt.png) repeat-x top;
-    }
-
-    .mGrid .pgr {
-        background: #424242 url(grd_pgr.png) repeat-x top;
-    }
-
-        .mGrid .pgr table {
-            margin: 5px 0;
-        }
-
-        .mGrid .pgr td {
-            border-width: 0;
-            padding: 0 6px;
-            border-left: none;
-            font-weight: bold;
-            color: #fff;
-            line-height: 12px;
-        }
-
-        .mGrid .pgr a {
-            color: #666;
-            text-decoration: none;
-        }
-
-            .mGrid .pgr a:hover {
-                color: #000;
-                text-decoration: none;
-            }*/
 .mGrid {
-    width: 100%;
-    background-color: #fff;
-    margin: 5px 0 10px 0;
-    border: solid 1px #525252;
-    border-collapse: collapse;
+    background-color: #4f4f4f !important;
 }
 
-    .mGrid td {
-        padding: 14px;
-        color: #717171;
-        text-align: center;
-    }
+  .mGrid td {
+    padding: 14px;
+    color: #272424;
+    text-align: center;
+    border-radius: 20px;
+  }
 
-    .mGrid th {
-        padding: 4px 16px;
-        color: white;
-        background: gray;
-        font-size: 0.9em;
-        text-align: center;
-        height: 40px;
-    }
+  .mGrid th {
+    padding: 4px 16px;
+    color: #fff;
+    background: #68768d;
+    font-size: 0.9em;
+    text-align: center;
+    height: 40px;
+  }
 
-    .mGrid .alt {
-        background: #fcfcfc url(grd_alt.png) repeat-x top;
-    }
+  .col a {
+    color: #fff;
+  }
 
-    .mGrid .pgr {
-        background: #75bcb5;
-    }
+table tbody tr
 
-        .mGrid .pgr table {
-            margin: 5px 0;
-        }
+.mGrid .alt {
+    background: #fcfcfc url(grd_alt.png) repeat-x top;
+}
 
-        .mGrid .pgr td {
-            border-width: 0;
-            padding: 0 6px;
-            font-weight: bold;
-            color: #fff;
-            line-height: 12px;
-        }
+.mGrid .pgr {
+    background: #75bcb5;
+}
 
-        .mGrid .pgr a {
-            color: #666;
-            text-decoration: none;
-        }
+.mGrid .pgr table {
+    margin: 5px 0;
+}
 
-            .mGrid .pgr a:hover {
-                color: #000;
-                text-decoration: none;
-            }
+.mGrid .pgr td {
+    border-width: 0;
+    padding: 0 6px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 12px;
+}
+
+.mGrid .pgr a {
+    color: #666;
+    text-decoration: none;
+}
+
+.mGrid .pgr a:hover {
+    color: #000;
+    text-decoration: none;
+}
 
 
 
@@ -405,9 +365,9 @@ input[type="file"] {
     background-color: black;
     opacity: 0.5;
     position: fixed;
-    top: 130px;
+    top: 60px;
     bottom: 0px;
-    left: -100%;
+    left: 0;
     display: flex;
     transition: left;
     z-index: 1;
@@ -461,7 +421,7 @@ h2{
     width:60%;
     margin-left:30%;
 }
-/*test*/
+
 .direcverif {
     height: 0px;
     overflow: hidden;
@@ -612,17 +572,13 @@ formpago {
     text-decoration: none;
 }
 .card {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: .25rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background: rgb(30, 41, 59);
 }
 .card-body {
     -ms-flex: 1 1 auto;
@@ -631,22 +587,26 @@ formpago {
     padding: 1.25rem;
 }
 .form-row {
-    display: -ms-flexbox;
-    /*display: flex;*/
-    -ms-flex-wrap: wrap;
+    display: flex;
     flex-wrap: wrap;
     margin-right: -5px;
     margin-left: -5px;
+    flex-direction: column;
+    gap: 20px;
+    color: #fff;
 }
 .card-header {
-    padding: .75rem 1.25rem;
-    margin-bottom: 0;
-    background-color: rgba(0,0,0,.03);
-    border-bottom: 1px solid rgba(0,0,0,.125);
+    padding: 20px;
+    border-bottom: 1px solid #fff;
+    margin: 20px 0;
+    text-align: center;
+    width: 80%;
+    color: #fff; 
+    font-size: 24px;
 }
 .container {
-    width: 70%;
-    margin: 10px auto;
+    width: 80%;
+    margin: 40px auto;
 }
 
 ul ul {
@@ -669,9 +629,7 @@ ul {
     margin-bottom:50px;
 }
 .desplegable {
-   
     position: relative;
-    /*max-height: 100%;*/
     clear:both;
 }
 #barra .fa {
@@ -699,20 +657,37 @@ nav div {
 #obser{
     float:left;
 }
-/*#BLOQUE4 {
-    clear: both;
-    margin-top: 50px;
-}
-#BLOQUE3 {
-    clear: both;
-    margin-top: 50px;
-}
-#BLOQUE2 {
-    clear: both;
-    margin-top: 50px;
-}
-#BLOQUE1 {
-    clear: both;
-    margin-top: 50px;
-}*/
 
+
+ul .li-title {
+    font-size: 20px;
+    padding-left: 25px;
+    color: rgb(60 161 213);
+}
+
+ul ul {
+    padding-left: 35px;
+}
+
+ul ul li a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: normal;
+    padding-left: 20px;
+    transition: .3s ease all;
+}
+ul ul li a:hover {
+    color: rgb(60 161 213);
+}
+
+tr th a {
+  color: #fff !important;
+}
+
+tr td {
+  color: #fff !important;
+}
+
+input[type='date'], input[type="text"], input[type='number'] {
+  color: #000 !important;
+}

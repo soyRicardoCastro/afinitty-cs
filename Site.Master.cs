@@ -313,144 +313,144 @@ namespace ReachSystem
                     A9.Attributes.Add("style", "display:none");
                     A14.Attributes.Add("style", "display:none");
                     A19.Attributes.Add("style", "display:none");
-                    DataTable DET;
-                    if (Request.Cookies["TimerC"] == null && timer >= 9 && timer < 14)
-                    {
-                        HttpCookie nombreS = new HttpCookie("timerC");
-                        nombreS.Value = timer.ToString();
-                        nombreS.Expires = DateTime.Now.AddHours(16);
-                        Response.Cookies.Add(nombreS);
-                        SqlConnection con = new SqlConnection(Conection.ConexLine);
-                        SqlDataAdapter sda = new SqlDataAdapter("select Correo, Alias from Usuario where perfil = 'OPERACIONES' or perfil = 'SUPEROP' ", con);
-                        DataTable dt = new DataTable();
-                        DET = dt;
-                        sda.Fill(dt);
-                        for (int j = 0; j < DET.Rows.Count; j++)
-                        {
+                    //DataTable DET;
+                    //if (Request.Cookies["TimerC"] == null && timer >= 9 && timer < 14)
+                    //{
+                    //    HttpCookie nombreS = new HttpCookie("timerC");
+                    //    nombreS.Value = timer.ToString();
+                    //    nombreS.Expires = DateTime.Now.AddHours(16);
+                    //    Response.Cookies.Add(nombreS);
+                    //    SqlConnection con = new SqlConnection(Conection.ConexLine);
+                    //    SqlDataAdapter sda = new SqlDataAdapter("select Correo, Alias from Usuario where (perfil = 'OPERACIONES' and estado = 'ACTIVO') or (perfil = 'SUPEROP' and estado = 'ACTIVO')", con);
+                    //    DataTable dt = new DataTable();
+                    //    DET = dt;
+                    //    sda.Fill(dt);
+                    //    for (int j = 0; j < DET.Rows.Count; j++)
+                    //    {
 
 
-                            string body = "<body>" +
-                                        "<h4>REPORTE CERTIFICADOS</h4>" +
-                                        "<h4>ESTIMAD@: " + DET.Rows[j][1].ToString() + "</h4>" +
-                                        "<h4>Estos son los certificados en estado INGRESADO</h4>" +
-                                        //"<h4>https://affinity.somee.com/ProcesoIngresado</h4>" +
-                                        //"<h4>https://affis.somee.com/ProcesoIngresado</h4>" +
-                                        "<h4>https://localhost:44349//ProcesoIngresado</h4>" +
-                                        "</body>";
-                            SmtpClient smtp = new SmtpClient();
-                            smtp.EnableSsl = false;
-                            smtp.UseDefaultCredentials = false;
-                            smtp.Host = "smtp.affinity.somee.com";
-                            smtp.Port = 26;
-                            smtp.Credentials = new NetworkCredential("certificados@affinity.somee.com", "Otto.123");
-                            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-
-
-
-                            MailMessage mail = new MailMessage();
-                            mail.From = new MailAddress("certificados@affinity.somee.com", "SISTEMA AFFIS");
-                            mail.To.Add(new MailAddress(DET.Rows[j][0].ToString()));
-                            mail.Subject = "REPORTE CERTIFICADOS INGRESADOS " + DateTime.Now + "";
-                            mail.IsBodyHtml = true;
-                            mail.Body = body;
-
-                            smtp.Send(mail);
-                        }
+                    //        string body = "<body>" +
+                    //                    "<h4>REPORTE CERTIFICADOS</h4>" +
+                    //                    "<h4>ESTIMAD@: " + DET.Rows[j][1].ToString() + "</h4>" +
+                    //                    "<h4>Estos son los certificados en estado INGRESADO</h4>" +
+                    //                    //"<h4>https://affinity.somee.com/ProcesoIngresado</h4>" +
+                    //                    //"<h4>https://affis.somee.com/ProcesoIngresado</h4>" +
+                    //                    "<h4>https://localhost:44349//ProcesoIngresado</h4>" +
+                    //                    "</body>";
+                    //        SmtpClient smtp = new SmtpClient();
+                    //        smtp.EnableSsl = false;
+                    //        smtp.UseDefaultCredentials = false;
+                    //        smtp.Host = "smtp.affinity.somee.com";
+                    //        smtp.Port = 26;
+                    //        smtp.Credentials = new NetworkCredential("reportecert@affinity.somee.com", "Otto.123");
+                    //        smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
 
 
 
+                    //        MailMessage mail = new MailMessage();
+                    //        mail.From = new MailAddress("certificados@affinity.somee.com", "SISTEMA AFFIS");
+                    //        mail.To.Add(new MailAddress(DET.Rows[j][0].ToString()));
+                    //        mail.Subject = "REPORTE CERTIFICADOS INGRESADOS " + DateTime.Now + "";
+                    //        mail.IsBodyHtml = true;
+                    //        mail.Body = body;
 
-                    }
-                    else if (Request.Cookies["TimerC2"] == null && timer >= 14 && timer < 17)
-                    {
-                        HttpCookie nombreS = new HttpCookie("timerC2");
-                        nombreS.Value = timer.ToString();
-                        nombreS.Expires = DateTime.Now.AddHours(16);
-                        Response.Cookies.Add(nombreS);
-                        SqlConnection con = new SqlConnection(Conection.ConexLine);
-                        SqlDataAdapter sda = new SqlDataAdapter("select Correo, Alias from Usuario where perfil = 'SUPEROP' ", con);
-                        DataTable dt = new DataTable();
-                        DET = dt;
-                        sda.Fill(dt);
-                        for (int j = 0; j < DET.Rows.Count; j++)
-                        {
-
-
-                            string body = "<body>" +
-                                        "<h4>REPORTE CERTIFICADOS</h4>" +
-                                        "<h4>ESTIMAD@: " + DET.Rows[j][1].ToString() + "</h4>" +
-                                        "<h4>Estos son los certificados en estado COMPLETADO</h4>" +
-                                        //"<h4>https://affinity.somee.com/ProcesoCompletado</h4>" +
-                                        //"<h4>https://affis.somee.com/ProcesoCompletado</h4>" +
-                                        "<h4>https://localhost:44349//ProcesoCompletado</h4>" +
-                                        "</body>";
-                            SmtpClient smtp = new SmtpClient();
-                            smtp.EnableSsl = false;
-                            smtp.UseDefaultCredentials = false;
-                            smtp.Host = "smtp.affinity.somee.com";
-                            smtp.Port = 26;
-                            smtp.Credentials = new NetworkCredential("certificados@affinity.somee.com", "Otto.123");
-                            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                    //        smtp.Send(mail);
+                    //    }
 
 
 
-                            MailMessage mail = new MailMessage();
-                            mail.From = new MailAddress("certificados@affinity.somee.com", "SISTEMA AFFIS");
-                            mail.To.Add(new MailAddress(DET.Rows[j][0].ToString()));
-                            mail.Subject = "REPORTE CERTIFICADOS COMPLETADOS " + DateTime.Now + "";
-                            mail.IsBodyHtml = true;
-                            mail.Body = body;
 
-                            smtp.Send(mail);
-                        }
-                    }
-                    else if (Request.Cookies["TimerC3"] == null && timer >= 17 && timer < 20)
-                    {
-                        HttpCookie nombreS = new HttpCookie("timerC3");
-                        nombreS.Value = timer.ToString();
-                        nombreS.Expires = DateTime.Now.AddHours(16);
-                        Response.Cookies.Add(nombreS);
-                        SqlConnection con = new SqlConnection(Conection.ConexLine);
-                        SqlDataAdapter sda = new SqlDataAdapter("select Correo, Alias from Usuario where perfil = 'ADMIN' ", con);
-                        DataTable dt = new DataTable();
-                        DET = dt;
-                        sda.Fill(dt);
-                        for (int j = 0; j < DET.Rows.Count; j++)
-                        {
+                    //}
+                    //else if (Request.Cookies["TimerC2"] == null && timer >= 14 && timer < 17)
+                    //{
+                    //    HttpCookie nombreS = new HttpCookie("timerC2");
+                    //    nombreS.Value = timer.ToString();
+                    //    nombreS.Expires = DateTime.Now.AddHours(16);
+                    //    Response.Cookies.Add(nombreS);
+                    //    SqlConnection con = new SqlConnection(Conection.ConexLine);
+                    //    SqlDataAdapter sda = new SqlDataAdapter("select Correo, Alias from Usuario where perfil = 'SUPEROP' and estado = 'ACTIVO'", con);
+                    //    DataTable dt = new DataTable();
+                    //    DET = dt;
+                    //    sda.Fill(dt);
+                    //    for (int j = 0; j < DET.Rows.Count; j++)
+                    //    {
 
 
-                            string body = "<body>" +
-                                        "<h4>REPORTE CERTIFICADOS</h4>" +
-                                        "<h4>ESTIMAD@: " + DET.Rows[j][1].ToString() + "</h4>" +
-                                        "<h4>Estos son los certificados en estado REVISADO</h4>" +
-                                        //"<h4>https://affinity.somee.com/ProcesoRevisado</h4>" +
-                                        //"<h4>https://affis.somee.com/ProcesoRevisado</h4>" +
-                                        "<h4>https://localhost:44349//ProcesoRevisado</h4>" +
-                                        "</body>";
-                            SmtpClient smtp = new SmtpClient();
-                            smtp.EnableSsl = false;
-                            smtp.UseDefaultCredentials = false;
-                            smtp.Host = "smtp.affinity.somee.com";
-                            smtp.Port = 26;
-                            smtp.Credentials = new NetworkCredential("certificados@affinity.somee.com", "Otto.123");
-                            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                    //        string body = "<body>" +
+                    //                    "<h4>REPORTE CERTIFICADOS</h4>" +
+                    //                    "<h4>ESTIMAD@: " + DET.Rows[j][1].ToString() + "</h4>" +
+                    //                    "<h4>Estos son los certificados en estado COMPLETADO</h4>" +
+                    //                    //"<h4>https://affinity.somee.com/ProcesoCompletado</h4>" +
+                    //                    //"<h4>https://affis.somee.com/ProcesoCompletado</h4>" +
+                    //                    "<h4>https://localhost:44349//ProcesoCompletado</h4>" +
+                    //                    "</body>";
+                    //        SmtpClient smtp = new SmtpClient();
+                    //        smtp.EnableSsl = false;
+                    //        smtp.UseDefaultCredentials = false;
+                    //        smtp.Host = "smtp.affinity.somee.com";
+                    //        smtp.Port = 26;
+                    //        smtp.Credentials = new NetworkCredential("reportecert@affinity.somee.com", "Otto.123");
+                    //        smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
 
 
 
-                            MailMessage mail = new MailMessage();
-                            mail.From = new MailAddress("certificados@affinity.somee.com", "SISTEMA AFFIS");
-                            mail.To.Add(new MailAddress(DET.Rows[j][0].ToString()));
-                            mail.Subject = "REPORTE CERTIFICADOS REVISADOS " + DateTime.Now + "";
-                            mail.IsBodyHtml = true;
-                            mail.Body = body;
+                    //        MailMessage mail = new MailMessage();
+                    //        mail.From = new MailAddress("certificados@affinity.somee.com", "SISTEMA AFFIS");
+                    //        mail.To.Add(new MailAddress(DET.Rows[j][0].ToString()));
+                    //        mail.Subject = "REPORTE CERTIFICADOS COMPLETADOS " + DateTime.Now + "";
+                    //        mail.IsBodyHtml = true;
+                    //        mail.Body = body;
 
-                            smtp.Send(mail);
-                        }
-                    }
-                    else
-                    {
+                    //        smtp.Send(mail);
+                    //    }
+                    //}
+                    //else if (Request.Cookies["TimerC3"] == null && timer >= 17 && timer < 20)
+                    //{
+                    //    HttpCookie nombreS = new HttpCookie("timerC3");
+                    //    nombreS.Value = timer.ToString();
+                    //    nombreS.Expires = DateTime.Now.AddHours(16);
+                    //    Response.Cookies.Add(nombreS);
+                    //    SqlConnection con = new SqlConnection(Conection.ConexLine);
+                    //    SqlDataAdapter sda = new SqlDataAdapter("select Correo, Alias from Usuario where perfil = 'ADMIN' ", con);
+                    //    DataTable dt = new DataTable();
+                    //    DET = dt;
+                    //    sda.Fill(dt);
+                    //    for (int j = 0; j < DET.Rows.Count; j++)
+                    //    {
 
-                    }
+
+                    //        string body = "<body>" +
+                    //                    "<h4>REPORTE CERTIFICADOS</h4>" +
+                    //                    "<h4>ESTIMAD@: " + DET.Rows[j][1].ToString() + "</h4>" +
+                    //                    "<h4>Estos son los certificados en estado REVISADO</h4>" +
+                    //                    //"<h4>https://affinity.somee.com/ProcesoRevisado</h4>" +
+                    //                    //"<h4>https://affis.somee.com/ProcesoRevisado</h4>" +
+                    //                    "<h4>https://localhost:44349//ProcesoRevisado</h4>" +
+                    //                    "</body>";
+                    //        SmtpClient smtp = new SmtpClient();
+                    //        smtp.EnableSsl = false;
+                    //        smtp.UseDefaultCredentials = false;
+                    //        smtp.Host = "smtp.affinity.somee.com";
+                    //        smtp.Port = 26;
+                    //        smtp.Credentials = new NetworkCredential("reportecert@affinity.somee.com", "Otto.123");
+                    //        smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+
+
+
+                    //        MailMessage mail = new MailMessage();
+                    //        mail.From = new MailAddress("certificados@affinity.somee.com", "SISTEMA AFFIS");
+                    //        mail.To.Add(new MailAddress(DET.Rows[j][0].ToString()));
+                    //        mail.Subject = "REPORTE CERTIFICADOS REVISADOS " + DateTime.Now + "";
+                    //        mail.IsBodyHtml = true;
+                    //        mail.Body = body;
+
+                    //        smtp.Send(mail);
+                    //    }
+                    //}
+                    //else
+                    //{
+
+                    //}
                 }
                 else if (Request.Cookies["PerfilC"].Value == "SUPERVEN")
                 {

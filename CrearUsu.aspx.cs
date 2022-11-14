@@ -71,7 +71,7 @@ namespace ReachSystem
                         querySaveStaff.Connection = openCon;
                         querySaveStaff.Parameters.Add("@Nombre", SqlDbType.VarChar).Value = Correo.Value;
                         querySaveStaff.Parameters.Add("@Apellido", SqlDbType.VarChar).Value = Text4.Value;
-                        querySaveStaff.Parameters.Add("@Correo", SqlDbType.VarChar).Value = Text5.Value;
+                        querySaveStaff.Parameters.Add("@Correo", SqlDbType.VarChar).Value = Text6.Value;
                         querySaveStaff.Parameters.Add("@Pass", SqlDbType.VarChar).Value = Text2.Value;
                         querySaveStaff.Parameters.Add("@Perfil", SqlDbType.VarChar).Value = DropDownList7.SelectedValue.ToString();
                         querySaveStaff.Parameters.Add("@Cargo", SqlDbType.VarChar).Value = DropDownList1.SelectedValue.ToString();

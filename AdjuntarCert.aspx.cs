@@ -26,6 +26,7 @@ namespace ReachSystem
                     Label8.Attributes.Add("style", "display:none");
                     Button3.Attributes.Add("style", "display:none");
                     GridView2.Attributes.Add("style", "display:none");
+
                 }
                 else if (Request.Cookies["indexC"].Value == "2")
                 {
@@ -74,7 +75,7 @@ namespace ReachSystem
                     Label8.Attributes.Add("style", "display:none");
                     RequiredFieldValidator1.Enabled = false;
                     GridView1.Attributes.Add("style", "display:none");
-                    
+
                     string connectionString = Conection.ConexLine;
                     string query = "Select Proceso from Asegurados where  NumeroCertificado = " + Request.Cookies["paramCert"].Value + "";
 
@@ -96,8 +97,8 @@ namespace ReachSystem
                                     DropDownList1.SelectedValue = "INGRESADO";
                                 }
                                 else
-                                {                                                                        
-                                    DropDownList1.SelectedValue = dr.GetFieldValue<string>(0);                                                                      
+                                {
+                                    DropDownList1.SelectedValue = dr.GetFieldValue<string>(0);
                                 }
 
 
@@ -137,7 +138,7 @@ namespace ReachSystem
                     Label8.Attributes.Add("style", "display:none");
                     GridView2.Attributes.Add("style", "display:none");
                 }
-            
+
             }
             else
             {
@@ -147,54 +148,62 @@ namespace ReachSystem
                 GridView2.Attributes.Add("style", "display:none");
             }
         }
-            
-            
-        
 
-        
+
+
+
+
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
             string transferente1;
             string transferente2;
             string transferente3;
-            using (BinaryReader reader = new BinaryReader(FileUpload1.PostedFile.InputStream))
+            if (FileUpload1.HasFile == true)
             {
-                if (FileUpload1.HasFile == true)
+                using (BinaryReader reader = new BinaryReader(FileUpload1.PostedFile.InputStream))
                 {
                     var Archivod1 = reader.ReadBytes(FileUpload1.PostedFile.ContentLength);
                     transferente1 = Convert.ToBase64String(Archivod1);
-                    
                 }
-                else
-                {
-                    transferente1 = "";
-                }
+
             }
-            using (BinaryReader reader2 = new BinaryReader(FileUpload2.PostedFile.InputStream))
+            else
             {
-                if (FileUpload2.HasFile == true)
+                transferente1 = "";
+            }
+
+
+
+            if (FileUpload2.HasFile == true)
+            {
+                using (BinaryReader reader2 = new BinaryReader(FileUpload2.PostedFile.InputStream))
                 {
                     var Archivod2 = reader2.ReadBytes(FileUpload2.PostedFile.ContentLength);
                     transferente2 = Convert.ToBase64String(Archivod2);
 
                 }
-                else
-                {
-                    transferente2 = "";
-                }
+
+
+
             }
-            using (BinaryReader reader3 = new BinaryReader(FileUpload3.PostedFile.InputStream))
+            else
             {
-                if (FileUpload3.HasFile == true)
+                transferente2 = "";
+            }
+            if (FileUpload3.HasFile == true)
+            {
+                using (BinaryReader reader3 = new BinaryReader(FileUpload3.PostedFile.InputStream))
                 {
                     var Archivod3 = reader3.ReadBytes(FileUpload3.PostedFile.ContentLength);
                     transferente3 = Convert.ToBase64String(Archivod3);
 
                 }
-                else
-                {
-                    transferente3 = "";
-                }
+
+
+            }
+            else
+            {
+                transferente3 = "";
             }
             if (transferente1 != "")
             {
@@ -315,7 +324,7 @@ namespace ReachSystem
 
                         using (SqlCommand querySaveStaff = new SqlCommand(saveStaff))
                         {
-                            querySaveStaff.Connection = openCon;                           
+                            querySaveStaff.Connection = openCon;
                             querySaveStaff.Parameters.Add("@Proceso", SqlDbType.VarChar).Value = DropDownList1.SelectedValue;
                             querySaveStaff.Parameters.Add("@NumeroCertificado", SqlDbType.Int).Value = Int32.Parse(Request.Cookies["paramCert"].Value);
                             try
@@ -340,10 +349,85 @@ namespace ReachSystem
                     }
                 }
             }
-            
-                   
+            else
+            {
+                string EstadoFinal;
+                if (DropDownList1.SelectedValue == "REVISADO")
+                {
+                    EstadoFinal = "VENTA";
+                }
+                else
+                {
+                    EstadoFinal = "PREVENTA";
+                }
+                using (SqlConnection openCon = new SqlConnection(Conection.ConexLine))
+                {
 
+                    string saveStaff = "UPDATE Dependientes SET Estado=@Estado WHERE NumeroCertificado=@NumeroCertificado";
+
+                    using (SqlCommand querySaveStaff = new SqlCommand(saveStaff))
+                    {
+                        querySaveStaff.Connection = openCon;
+                        querySaveStaff.Parameters.Add("@Estado", SqlDbType.VarChar).Value = EstadoFinal;
+                        querySaveStaff.Parameters.Add("@NumeroCertificado", SqlDbType.Int).Value = Int32.Parse(Request.Cookies["paramCert"].Value);
+                        try
+                        {
+                            openCon.Open();
+                            querySaveStaff.ExecuteNonQuery();
+                            openCon.Close();
+                            HttpCookie indexS = new HttpCookie("indexC");
+                            indexS.Value = "8";
+                            indexS.Expires = DateTime.Now.AddDays(30);
+                            Response.Cookies.Add(indexS);
+                            Response.Cookies["paramCedula"].Expires = DateTime.Now.AddDays(-1);
+                            Response.Cookies["paramCert"].Expires = DateTime.Now.AddDays(-1);
+                            Page.RegisterStartupScript("LoadFunction", "<script type='text/javascript'>alert('PROCESO FINALIZADO CON EXITO');window.location='ProcCert.aspx'</script>");
+
+                        }
+                        catch (SqlException ex)
+                        {
+                            Response.Write("Error" + ex);
+                        }
+                    }
+                }
+                using (SqlConnection openCon = new SqlConnection(Conection.ConexLine))
+                {
+
+                    string saveStaff = "UPDATE Asegurados SET Proceso=@Proceso, Estado=@Estado WHERE NumeroCertificado=@NumeroCertificado";
+
+                    using (SqlCommand querySaveStaff = new SqlCommand(saveStaff))
+                    {
+                        querySaveStaff.Connection = openCon;
+                        querySaveStaff.Parameters.Add("@Proceso", SqlDbType.VarChar).Value = DropDownList1.SelectedValue;
+                        querySaveStaff.Parameters.Add("@Estado", SqlDbType.VarChar).Value = EstadoFinal;
+                        querySaveStaff.Parameters.Add("@NumeroCertificado", SqlDbType.Int).Value = Int32.Parse(Request.Cookies["paramCert"].Value);
+                        try
+                        {
+                            openCon.Open();
+                            querySaveStaff.ExecuteNonQuery();
+                            openCon.Close();
+                            HttpCookie indexS = new HttpCookie("indexC");
+                            indexS.Value = "8";
+                            indexS.Expires = DateTime.Now.AddDays(30);
+                            Response.Cookies.Add(indexS);
+                            Response.Cookies["paramCedula"].Expires = DateTime.Now.AddDays(-1);
+                            Response.Cookies["paramCert"].Expires = DateTime.Now.AddDays(-1);
+                            Page.RegisterStartupScript("LoadFunction", "<script type='text/javascript'>alert('PROCESO FINALIZADO CON EXITO');window.location='Default.aspx'</script>");
+
+                        }
+                        catch (SqlException ex)
+                        {
+                            Response.Write("Error" + ex);
+                        }
+                    }
+                }
+            }
         }
+    
+
+
+
+    
         protected void Unnamed2_Click(object sender, EventArgs e)
         {
             Response.Redirect("InclusionTomador.aspx");
@@ -412,7 +496,7 @@ namespace ReachSystem
                                 Response.Clear();
                                 Response.ClearHeaders();
                                 Response.ContentType = "application/pdf";
-                                Response.AddHeader("content-disposition", "attachment; filename=" + "CERTIFICADO NUMERO " + GridView1.Rows[0].Cells[1].Text + ".pdf");
+                                Response.AddHeader("content-disposition", "attachment; filename=" + "CERTIFICADO NUMERO " + Request.Cookies["paramCert"].Value + ".pdf");
                                 Response.BufferOutput = true; ;
                                 Response.OutputStream.Write(transporte, 0, transporte.Length);
                                 Response.End();

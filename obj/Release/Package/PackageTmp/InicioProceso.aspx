@@ -37,7 +37,7 @@
                             <SortedDescendingHeaderStyle BackColor="#242121" />
 <PagerStyle CssClass="pgr"></PagerStyle>
                     </asp:GridView>
-                    <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:affisDBConnectionString %>' SelectCommand="SELECT [Cedula], [Nombre], [NumeroCertificado], [Estado] FROM [Asegurados] WHERE NumeroCertificado IS NOT NULL AND ([Cedula] = @Cedula) OR ([NumeroCertificado] = @NumeroCertificado)">
+                    <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:affisDBConnectionString %>' SelectCommand="SELECT [Cedula], [Nombre], [NumeroCertificado], [Estado] FROM [Asegurados] WHERE NumeroCertificado IS NOT NULL AND estado <> 'EXCLUIDO' AND ([Cedula] = @Cedula) OR ([NumeroCertificado] = @NumeroCertificado)">
                         <SelectParameters>                            
                             <asp:CookieParameter CookieName="paramCedula" Name="Cedula" Type="Int64"></asp:CookieParameter>
                             <asp:CookieParameter CookieName="paramCedula" Name="NumeroCertificado" Type="Int64"></asp:CookieParameter>

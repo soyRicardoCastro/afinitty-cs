@@ -118,18 +118,41 @@ namespace ReachSystem
                     //Response.Cookies["nombreadC"].Expires = DateTime.Now.AddDays(-1);
                     //Response.Cookies["generotomC"].Expires = DateTime.Now.AddDays(-1);
                     //Response.Cookies["empresaadC"].Expires = DateTime.Now.AddDays(-1);
-
+                    
                     Response.Cookies["indexC"].Expires = DateTime.Now.AddDays(-1);
 
                     HttpCookie indexS = new HttpCookie("indexC");
                     indexS.Value = "8";
                     indexS.Expires = DateTime.Now.AddDays(30);
                     Response.Cookies.Add(indexS);
+
+                    Response.Cookies["paramCedula"].Expires = DateTime.Now.AddDays(-1);
+
+                    
+
                 }
                 else
                 {
-                    Label5.Attributes.Add("style", "display:none");
+                    if (Request.Cookies["paramCedula"] != null)
+                    {
+
+                    }
+                    else
+                    {
+                        HttpCookie indexS2 = new HttpCookie("paramCedula");
+                        indexS2.Value = Correo.Value;
+                        indexS2.Expires = DateTime.Now.AddDays(30);
+                        Response.Cookies.Add(indexS2);
+                    }
+
+
+
+
+
                     Correo.Value = Request.Cookies["paramCedula"].Value;
+
+
+                    Label5.Attributes.Add("style", "display:none");
                     //Text14.Value = "" + DateTime.Now.Year + "-" + DateTime.Now.AddMonths(1).Month + "-01";
                     DropDownList2.Enabled = false;
                     if (!IsPostBack)
@@ -148,8 +171,16 @@ namespace ReachSystem
             }
             else
             {
+             
+
                 Label5.Attributes.Add("style", "display:none");
                 Correo.Value = Request.Cookies["paramCedula"].Value;
+
+                HttpCookie indexS2 = new HttpCookie("paramCedula");
+                indexS2.Value = Correo.Value;
+                indexS2.Expires = DateTime.Now.AddDays(30);
+                Response.Cookies.Add(indexS2);
+                Label5.Attributes.Add("style", "display:none");
                 //Text14.Value = "" + DateTime.Now.Year + "-" + DateTime.Now.AddMonths(1).Month + "-01";
                 DropDownList2.Enabled = false;
                 if (!IsPostBack)
@@ -222,6 +253,11 @@ namespace ReachSystem
             {
                 if (Request.Cookies["indexC"].Value == "8")
                 {
+                    HttpCookie indexS2 = new HttpCookie("paramCedula");
+                    indexS2.Value = Correo.Value;
+                    indexS2.Expires = DateTime.Now.AddDays(30);
+                    Response.Cookies.Add(indexS2);
+
                     HttpCookie fechavigS = new HttpCookie("fechavigC");
                     fechavigS.Value = Text14.Value;
                     fechavigS.Expires = DateTime.Now.AddDays(30);
@@ -247,6 +283,28 @@ namespace ReachSystem
 
                         
 
+                    }
+                    using (SqlConnection openCon = new SqlConnection(Conection.ConexLine))
+                    {
+                        string saveStaff = "UPDATE Dependientes SET CedulaTomador=@Cedula WHERE NumeroCertificado=@NumeroCertificado";
+
+                        using (SqlCommand querySaveStaff = new SqlCommand(saveStaff))
+                        {
+                            querySaveStaff.Connection = openCon;
+                            querySaveStaff.Parameters.Add("@Cedula", SqlDbType.BigInt).Value = Int64.Parse(Correo.Value);                            
+                            querySaveStaff.Parameters.Add("@NumeroCertificado", SqlDbType.Int).Value = Int32.Parse(Request.Cookies["paramCert"].Value);
+                            try
+                            {
+                                openCon.Open();
+                                querySaveStaff.ExecuteNonQuery();
+                                openCon.Close();
+                                
+                            }
+                            catch (SqlException ex)
+                            {
+                                Response.Write("Error" + ex);
+                            }
+                        }
                     }
                     using (SqlConnection openCon = new SqlConnection(Conection.ConexLine))
                     {

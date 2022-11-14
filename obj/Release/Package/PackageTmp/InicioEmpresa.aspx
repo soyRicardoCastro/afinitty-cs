@@ -14,7 +14,7 @@
                 <div class="form-row">
                     
     <center><input class="formulario" placeholder="NOMBRE COMERCIAL" id="Correo" type="text" runat="server"  AutoPostBack="true" required/><br />
-        <asp:RegularExpressionValidator Display="Dynamic" ControlToValidate="Correo" ID="MyPassordMinMaxLengthValidator" ValidationExpression="^[\s\S]{3,10}$" runat="server" ErrorMessage="LA BUSQUEDA DEBE TENER 3-10 CARACTERES"></asp:RegularExpressionValidator><br />        
+        <asp:RegularExpressionValidator Display="Dynamic" ControlToValidate="Correo" ID="MyPassordMinMaxLengthValidator" ValidationExpression="^[\s\S]{1,30}$" runat="server" ErrorMessage="LA BUSQUEDA DEBE TENER 1-30 CARACTERES"></asp:RegularExpressionValidator><br />        
         <asp:Button class="botonsubmit" value="REGISTRARME" type="submit" runat="server" CssClass="botonsubmit" Text="BASE INTERNA"  OnClick="Unnamed1_Click"/></center>    
                     
                     <hr />

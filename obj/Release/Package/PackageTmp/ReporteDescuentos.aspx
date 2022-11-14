@@ -51,7 +51,7 @@
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                         <PagerStyle CssClass="pgr"></PagerStyle>
                     </asp:GridView>
-                    <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:affisDBConnectionString %>' SelectCommand="Select distinct 'x', Codigo, Nombre, Cedula, SUM(TotalCobrar) OVER(PARTITION BY Cedula) As Descuento FROM Asegurados WHERE FechaVigencia BETWEEN @fechaini AND @fechafin AND Estado = 'VENTA' AND NombreComercial = @ven group by Cedula, Nombre, Codigo, TotalCobrar"> 
+                    <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:affisDBConnectionString %>' SelectCommand="Select distinct 'x', Codigo, Nombre, Cedula, SUM(TotalCobrar) OVER(PARTITION BY Cedula) As Descuento FROM Asegurados WHERE FechaVigencia BETWEEN @fechaini AND @fechafin AND Estado = 'VENTA' AND NombreComercial = @ven"> 
                         <SelectParameters>                                
                             <asp:CookieParameter CookieName="paramIni" Name="fechaini" Type="String"></asp:CookieParameter> 
                             <asp:CookieParameter CookieName="paramFin" Name="fechafin" Type="String"></asp:CookieParameter> 
