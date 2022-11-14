@@ -280,6 +280,8 @@ select.formulario {
 }
 .mGrid {
     background-color: #4f4f4f !important;
+    min-width: 1000px !important;
+    margin: 0 auto;
 }
 
   .mGrid td {
