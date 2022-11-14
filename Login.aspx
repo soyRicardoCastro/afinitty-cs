@@ -17,7 +17,7 @@
    <nav class="container-fluid">
      <ul>
        <li>
-         <img src="https://1.bp.blogspot.com/-pWSO2elPkeI/X5woEanJ0GI/AAAAAAAAPkI/UMptMYuBh6oX0V61V2758z_VF52oc8i-ACLcBGAsYHQ/s16000/logo.png"/>
+         <img src="https://i.ibb.co/v306sQ3/Refrescamiento-de-logo-D-L-Mesa-de-trabajo-1-copia-2-Copy-prisma.png" class="mr-3 h-6 sm:h-10" style="width: 60px;" />
        </li>
      </ul>                       
   </nav>

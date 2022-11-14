@@ -45,7 +45,7 @@
           <svg class="w-6 h-6" aria-hidden="true" fill="#fff" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" style="--darkreader-inline-fill: currentColor;" data-darkreader-inline-fill=""><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
         </button>
         <a href="#" class="flex items-center">
-            <img src="https://i.ibb.co/v306sQ3/Refrescamiento-de-logo-D-L-Mesa-de-trabajo-1-copia-2-Copy-prisma.png" class="mr-3 h-6 sm:h-10" alt="Flowbite Logo">
+            <img src="https://i.ibb.co/v306sQ3/Refrescamiento-de-logo-D-L-Mesa-de-trabajo-1-copia-2-Copy-prisma.png" class="mr-3 h-6 sm:h-10" alt="Logo">
             <span class="self-center font-semibold whitespace-nowrap dark:text-white text-3xl [letter-spacing:3px;]">D&L</span>
         </a>
     </li>
